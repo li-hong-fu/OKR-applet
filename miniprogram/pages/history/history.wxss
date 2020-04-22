@@ -1,0 +1,82 @@
+.todo-banner{
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+.todo-banner_image{
+  width: 80%;
+  height: 80px;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.todo-tips{
+  font-size: 22px;
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  text-shadow:2px 2px 2px #888888;
+}
+
+.todo-list{
+  padding-bottom: 45px;
+}
+.todo-item{
+  padding-left: 25px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 2px #888888;
+  position: relative;
+  overflow: hidden;
+}
+.todo-item::after{
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #999;
+  content: '完成';
+  line-height: 78px;
+  text-align: center;
+  font-size: 22px;
+  color: #999;
+  border-radius: 50%;
+  opacity: .4;
+  transform: rotate(-45deg);
+}
+.todo-item_hover{
+  opacity: 0.5;
+}
+.todo-title{
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+}
+.todo-title::after{
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background-color: #AAAAAA;
+  border-radius: 50%;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.todo_created_time{
+  font-size: 14px;
+  padding: 5px 0;
+  color:#AAAAAA;
+  position: relative;
+}
+.todo_created_time::after{
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background-color: #AAAAAA;
+  border-radius: 50%;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}

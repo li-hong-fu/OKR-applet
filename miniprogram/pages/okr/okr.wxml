@@ -1,0 +1,17 @@
+<view class="page-container">
+  <view class="okr-banner">
+    <image class="okr-banner_image" src="/images/tab/o.png"/>
+    <image class="okr-banner_image" src="/images/tab/k.png"/>
+    <image class="okr-banner_image" src="/images/tab/r.png"/>
+  </view>
+  <view class="okr-list">
+    <view class="okr-item {{item.state === 1 ? 'active' : ''}}"
+      hover-class="okr-item_hover"
+      wx:for="{{okr}}"
+      bindtap="handActionSheet">
+      <view class="ork-title">{{item.title}}</view>
+      <view class="okr_created_time">创建时间:{{item.date_display}}</view>
+    </view>
+  </view>
+  <navigator class="add-btn" url="/pages/okr_create/okr_create">添加 OKR</navigator>
+</view>

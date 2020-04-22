@@ -1,0 +1,118 @@
+.page-container{
+  position: relative;
+}
+
+.okr-banner{
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0 20px 0;
+  box-shadow: 2px 2px 2px 2px #888888;
+  margin-bottom: 20px;
+}
+
+.okr-banner_image{
+  width: 80px;
+  height: 80px;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.okr-list{
+  padding-bottom: 45px;
+}
+.okr-item{
+  padding-left: 25px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 2px #888888;
+  position: relative;
+  overflow: hidden;
+}
+.okr-item.active::after{
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #999;
+  content: '完成';
+  line-height: 78px;
+  text-align: center;
+  font-size: 22px;
+  color: #999;
+  border-radius: 50%;
+  opacity: .4;
+  transform: rotate(-45deg);
+}
+.okr-item_hover{
+  opacity: 0.5;
+}
+.okr-title{
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+}
+.okr-title::after{
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background-color: #AAAAAA;
+  border-radius: 50%;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.okr_created_time{
+  font-size: 14px;
+  padding: 5px 0;
+  color:#AAAAAA;
+  position: relative;
+}
+.okr_created_time::after{
+  content: '';
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background-color: #AAAAAA;
+  border-radius: 50%;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.add-btn{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-family: monospace;
+  height: 60px;
+  line-height: 90px;
+  width: 120px;
+  text-align: center;
+  background-color: #07c160;
+  color: #ffffff;
+  border-radius: 120px 120px 0 0;
+}
+.add-btn::after{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #ffffff;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.add-btn::before{
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background-color: #ffffff;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+}

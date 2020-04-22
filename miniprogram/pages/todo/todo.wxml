@@ -1,0 +1,27 @@
+<view class="page-container">
+  <view class="todo-banner">
+    <image class="todo-banner_image" src="/images/tab/time.png"/>
+  </view>
+  <view class="todo-tips">你必须做你不得不做的事:</view>
+  <view class="todo-list">
+    <view class="todo-item"
+      hover-class="todo-item_hover"
+      wx:for="{{todoList}}"
+      data-id="{{item._id}}"
+      data-index="{{index}}"
+      wx:if="{{item.state === 0}}"
+      bindtap="handActionSheet">
+      <view class="todo-title">{{item.content}}</view>
+      <view class="todo_created_time">创建时间:{{item.date_display}}</view>
+    </view>
+  </view>
+  <view class="todo-add">
+    <input type="text"
+      class="todo-add_Input"
+      placeholder="请输入你需要完成的事请"
+      bindinput="getInput"
+      value="{{content}}"
+      />
+    <button class="todo-add_button" bindtap="addTodo">添加</button>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="page-container">
+  <view class="page-title">
+    <view class="page-title-Chinese">目标和关键成果</view>
+    <view class="page-title-English">Goals and key outcomes</view>
+    <text decode="{{true}}" space="nbsp" class="page-title-description">
+      这是一个自我管理目标与成果的管理系统，可根据自身条件输入要完成的目标，跟进自身所完成的成果来进行自我管理
+    </text>
+  </view>
+  <view class="page-login">
+    <image class="page-logo" src="/images/tab/logo.png"/>
+    <button class="page-button" hover-class="page-button_hover" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">立即体验</button>
+  </view>
+</view>

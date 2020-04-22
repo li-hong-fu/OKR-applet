@@ -1,0 +1,58 @@
+.page-title{
+  padding: 20px;
+  border-bottom: 1px solid #DDDDDD;
+}
+.page-title-Chinese{
+  font-size: 22px;
+}
+.page-title-English{
+  font-size: 22px;
+  margin: 10px 0 0 25px;
+  position: relative;
+}
+.page-title-English::after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #DDDDDD;
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.page-title-description{
+  font-size: 14px;
+  line-height: 25px;
+  position: relative;
+}
+.page-title-description::after{
+  position: absolute;
+  content: '';
+  width:0;
+  height:0;
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+  border-left:10px solid red;
+  top: 25px;
+  left: 0;
+}
+
+
+.page-login{
+  margin-top: 30px;
+  text-align: center;
+}
+.page-logo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.page-button{
+  margin-top: 20px;
+  width: 184px;
+  font-size: 22px;
+}
+.page-button_hover{
+  opacity: 0.5;
+}

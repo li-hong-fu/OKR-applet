@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/okr_create/okr_create",
+    "pages/todo/todo",
+    "pages/okr/okr",
+    "pages/history/history",
+    "pages/okr_detai/okr_detai",
+    "pages/okr_edit/okr_edit",
+    "pages/todo_keyresult/todo_keyresult"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F5FFFA",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "backgroundColor":"#F5FFFA",
+    "list":[{
+      "pagePath":"pages/todo/todo",
+      "iconPath":"/images/tab/todo_list.png",
+      "selectedIconPath":"/images/tab/todo_list_active.png"
+    },{
+      "pagePath":"pages/history/history",
+      "iconPath":"/images/tab/todo_fulfill.png",
+      "selectedIconPath":"/images/tab/todo_fulfill_active.png"
+    },{
+      "pagePath":"pages/okr/okr",
+      "iconPath":"/images/tab/objective.png",
+      "selectedIconPath":"/images/tab/objective_active.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

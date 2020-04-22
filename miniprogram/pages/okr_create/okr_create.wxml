@@ -1,0 +1,41 @@
+<view class="page-container">
+  <view class="page-banner">
+    <view class="banner-title">
+      <span>O</span>
+      <span>K</span>
+      <span>R</span>
+    </view>
+    <view class="banner-describe">目标 + 关键成果</view>
+  </view>
+  <view class="page-form">
+    <view class="from-item">
+      <view class="form-title">Objective 目标：</view>
+      <view class="from-label">
+        <input type="text"
+          class="from-input"
+          placeholder="请输入你的目标"
+          value="{{objective}}"
+          bindinput="handObjective" />
+        <image class="from-ctxl"
+          src="/images/tab/add_sign.png"
+          bindtap="handAddKeyresult"/>
+      </view>
+    </view>
+    <view class="from-item"  wx:for="{{keyresult}}" wx:key="unique">
+      <view class="form-title">Keyresult  成果：{{index + 1}}</view>
+      <view class="from-label">
+        <input type="text"
+          class="from-input"
+          placeholder="请输入你的目标"
+          data-index="{{index}}"
+          value="{{item.title}}"
+          bindinput="handKeyresult" />
+        <image class="from-ctxl"
+          src="/images/tab/minus_sign.png"
+          data-index="{{index}}"
+          bindtap="handDeleteKeyresult"/>
+      </view>
+    </view>
+  </view>
+  <button class="page-button" hover-class="page-button_hover" bindtap="handCreate">添加 OKR</button>
+</view>
