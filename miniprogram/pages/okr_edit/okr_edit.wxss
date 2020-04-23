@@ -1,0 +1,70 @@
+.page-container{
+  position: relative;
+}
+
+
+.page-banner{
+  text-align: center;
+  padding: 10px 0 20px 0;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 2px 2px #888888;
+}
+.banner-title{
+  display: flex;
+  justify-content: space-around;
+  font-size: 5em;
+  font-weight: 600;
+  color: rgb(6, 6, 153);
+  text-shadow: 2px 2px 2px #888888;
+}
+.banner-describe{
+  font-size: 2em;
+}
+
+.page-form{
+  padding-bottom: 66px;
+}
+.from-item{
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  box-shadow: 2px 2px 2px #888888;
+}
+.form-title{
+  font-size: 18px;
+  font-family: monospace;
+  margin-bottom: 10px;
+}
+.from-label{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.from-input{
+  height: 35px;
+  width: 80%;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  padding-left: 10px;
+}
+.from-ctxl{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px #888888;
+}
+.from-ctxl:hover{
+  opacity: 0.5;
+}
+
+.page-button{
+  position: fixed;
+  width: 80%;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #07c160;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: monospace;
+  font-weight: 600;
+}

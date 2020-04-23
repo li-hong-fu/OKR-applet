@@ -38,9 +38,10 @@ Page({
   },
   todoUpdate:function(id,index){
     let state = 0
+    let finished_time = null
     wx.cloud.callFunction({
       name:'todoUpdate',
-      data:{ id,state },
+      data:{ id,state,finished_time },
       success:res => {
         let todoList = this.data.todoList
         todoList.splice(index,1)

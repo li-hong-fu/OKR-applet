@@ -8,6 +8,9 @@
     <view class="okr-item {{item.state === 1 ? 'active' : ''}}"
       hover-class="okr-item_hover"
       wx:for="{{okr}}"
+      data-id="{{item._id}}"
+      data-index="{{index}}"
+      data-state="{{item.state}}"
       bindtap="handActionSheet">
       <view class="ork-title">{{item.title}}</view>
       <view class="okr_created_time">创建时间:{{item.date_display}}</view>

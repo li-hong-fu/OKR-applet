@@ -21,7 +21,9 @@
   font-size: 2em;
 }
 
-
+.page-form{
+  padding-bottom: 66px;
+}
 .from-item{
   margin-bottom: 25px;
   padding-bottom: 10px;

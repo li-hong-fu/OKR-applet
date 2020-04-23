@@ -8,10 +8,12 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   let id = event.id
   let state = event.state
+  let finished_time = event.finished_time
   try{
     return await db.collection('todo').where({ _id:id }).update({
       data:{
-        state:state
+        state:state,
+        finished_time:finished_time
       }
     })
   }catch(e){

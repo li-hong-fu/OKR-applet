@@ -17,7 +17,6 @@ Page({
           this.setData({
             todoList:res.data
           })
-          console.log(this.data.todoList)
         }
       })
     })
@@ -33,6 +32,7 @@ Page({
     let content = this.data.content
     let userInfo = App.globalData.userInfo
     let date_display = formatTime(new Date())
+    let finished_time = null
     let state = 0
     let createTime = db.serverDate();
     
@@ -46,7 +46,7 @@ Page({
 
     db.collection('todo').add({
       data:{
-        openid,content,userInfo,date_display,state,createTime
+        openid,content,userInfo,date_display,finished_time,state,createTime
       },
       success:res => {
         let todoList = this.data.todoList
@@ -84,9 +84,10 @@ Page({
   },
   todoUpdate:function(id,index){
     let state = 1
+    let finished_time = formatTime(new Date())
     wx.cloud.callFunction({
       name:'todoUpdate',
-      data:{ id,state },
+      data:{ id,state,finished_time },
       success:res => {
         let todoList = this.data.todoList
         todoList.splice(index,1)

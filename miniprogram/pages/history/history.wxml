@@ -12,7 +12,7 @@
       wx:if="{{item.state === 1}}"
       bindtap="handActionSheet">
       <view class="todo-title">{{item.content}}</view>
-      <view class="todo_created_time">创建时间:{{item.date_display}}</view>
+      <view class="todo_created_time">完成时间:{{item.finished_time}}</view>
     </view>
   </view>
 </view>

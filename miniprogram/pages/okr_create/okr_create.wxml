@@ -14,7 +14,6 @@
         <input type="text"
           class="from-input"
           placeholder="请输入你的目标"
-          value="{{objective}}"
           bindinput="handObjective" />
         <image class="from-ctxl"
           src="/images/tab/add_sign.png"
@@ -28,7 +27,6 @@
           class="from-input"
           placeholder="请输入你的目标"
           data-index="{{index}}"
-          value="{{item.title}}"
           bindinput="handKeyresult" />
         <image class="from-ctxl"
           src="/images/tab/minus_sign.png"
