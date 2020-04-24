@@ -41,6 +41,7 @@ Page({
     let finished_time = null
     let state = 0
     let createTime = db.serverDate();
+    let active = true
     
     let krTitle = keyresult.every(data => data.title)
 
@@ -62,7 +63,7 @@ Page({
           let title = data.title
           db.collection('keyresult').add({
             data:{
-              objective_id,title,date_display,finished_time,state,createTime
+              objective_id,title,date_display,finished_time,state,createTime,active
             },
             success:res => {
               wx.showToast({

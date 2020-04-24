@@ -1,1 +1,21 @@
-<view class="page-container">Todo与Keyresult绑定页</view>
+<view class="page-container">
+  <view class="page-banner">KR 关联</view>
+  <view class="page-title">请选择关键成果(keyresult)绑定:</view>
+  <view class="page-list">
+    <view class="objective-item" wx:for="{{okr}}" wx:key="{{item._id}}">
+      <view class="objective-title">目标:{{item.title}}</view>
+      <view class="keyresult-list">
+        <view class="keyresult-item {{kr.active ? 'active':''}}"
+          wx:for="{{item.keyresult}}"
+          wx:for-item="kr"
+          wx:for-index="krindex"
+          wx:key="{{kr.key}}"
+          data-active="{{kr.active}}"
+          data-keyresult_id="{{kr._id}}"
+          data-objective_index="{{index}}"
+          data-index="{{krindex}}"
+          bindtap="handUpdate">{{kr.title}}</view>
+      </view>
+    </view>
+  </view>
+</view>

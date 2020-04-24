@@ -52,7 +52,6 @@ Page({
     })
   },
   okrDetele:function(id,index){
-    console.log(id,index)
     let okr = this.data.okr
     wx.cloud.callFunction({
       name:'okrDetele',
