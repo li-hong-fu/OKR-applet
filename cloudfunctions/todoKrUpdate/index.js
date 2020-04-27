@@ -10,11 +10,11 @@ exports.main = async (event, context) => {
     let todo_id = event.todo_id
     let active = event.active
     let keyresult_id = event.keyresult_id
-    await db.collection('keyresult').where({_id:keyresult_id}).update({
-      data:{
-        active:!active
-      }
-    })
+    // await db.collection('keyresult').where({_id:keyresult_id}).update({
+    //   data:{
+    //     active:!active
+    //   }
+    // })
 
     if(!active){
       await db.collection('todo_keyresult').add({

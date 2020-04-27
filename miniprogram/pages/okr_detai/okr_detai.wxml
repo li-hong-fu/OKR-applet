@@ -1,1 +1,31 @@
-<view class="page-container">OKR详情页</view>
+<view class="page-container">
+  <view class="okr-banner">
+    <image class="okr-banner_image" src="/images/tab/o.png"/>
+    <image class="okr-banner_image" src="/images/tab/k.png"/>
+    <image class="okr-banner_image" src="/images/tab/r.png"/>
+  </view>
+  <view class="okr-content">
+    <view class="objective-item {{objective.state === 1 ? 'active':''}}">
+      <view class="objextive-title">{{objective.title}}</view>
+      <view class="objective-created_time">创建时间：{{objective.date_display}}</view>
+      <view class="objective-created_time">完成时间：{{objective.finished_time}}</view>
+    </view>
+    <view class="keyresult-list">
+      <view class="keyresult-item"
+        wx:for="{{todo_keyresult}}"
+        wx:key="{{item._id}}">
+        <view class="keyresult-info">
+          <view class="keyresult-title">{{item.title}}</view>
+          <view class="keyresult-tag">{{item.state ? '已完成':'点击标记'}}</view>
+        </view>
+        <view class="todo-list">
+          <view class="todo-item"
+            wx:for="{{item.todo}}"
+            wx:for-item="todo">
+            <view class="todo-title {{todo.state === 1 ? 'active':''}}">{{todo.content}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
